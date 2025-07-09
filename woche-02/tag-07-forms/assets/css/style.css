@@ -1,0 +1,91 @@
+html {
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 5vh 10vw;
+  /* margin: 0 auto; */
+}
+
+/* ! ACHTUNG der Alpha-Wert sollte nur mit Punkt "." geschrieben werden, sobald man nicht mit Ganzzahlen arbeitet */
+
+/* ! Bei hex: die letzten zwei Zahlen können als Alpha bzw. Opacity verwendet werden */
+
+fieldset {
+  border: 2px solid black;
+  background-color: #17afaa36; /* rgba(62, 153, 185, 0.15) */
+  padding: 20px 30px;
+  max-width: 550px;
+}
+
+legend {
+  font-size: 3rem;
+}
+
+section {
+  margin: 20px 0;
+}
+
+h3 {
+  margin-top: 5px;
+}
+
+/* Wir haben drei Möglichkeiten das input-Element zu selektieren */
+
+/* # Variante 1 */
+input {
+  padding: 5px 20px;
+  margin: 5px 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* # Variante 2 - über die IDs oder classes */
+#text,
+#number,
+#telefon,
+#mail,
+#password {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* # Variante 3 - über type, die Schreibweise ist => eckige Klammer, dann type als keyword und den type selbst z.B. range, password, email, ...*/
+
+input[type="range"] {
+  cursor: pointer;
+  margin-top: 30px;
+  width: 200px;
+}
+
+input[type="button"] {
+  border: none;
+  background: darkgreen;
+  color: white;
+  padding: 1rem 2rem;
+}
+
+textarea {
+  background: url("../img/batman.webp") center/contain no-repeat;
+  /* Entweder alles in einer Zeile, dann arbeitet man nur mit background, oder man benutzt die 3 Eigenschaften nacheinander */
+  /* background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat; */
+  width: 100%;
+  background-color: white;
+  padding: 5px;
+}
+
+input[type="submit"] {
+  border: none;
+  padding: 1rem 3rem;
+  background-color: deeppink;
+  color: white;
+}
