@@ -1,0 +1,175 @@
+html {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+header {
+  border: 20px solid aqua;
+  padding: 20px 40px;
+  margin-bottom: 30px;
+}
+
+nav section a {
+  padding: 15px;
+  color: black;
+}
+
+h2,
+h3 {
+  color: deeppink;
+  font-size: 30px;
+}
+
+h1 {
+  margin-bottom: 20px;
+  letter-spacing: 5px;
+}
+
+h2 {
+  margin-left: 20px;
+}
+
+button {
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px, 5px 5px 0px 0px;
+  position: relative;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+button:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+main {
+  margin: 0 40px;
+}
+
+/* # display: flex */
+
+nav {
+  /* ? Das Logo & die Links sollen nebeneinander stehen */
+  display: flex; /* setzt einen Container in einen flexiblen Zustand */
+  align-items: center; /* zentriert flex-Elemente vertikal */
+  justify-content: space-between; /* verfügbarer Platz wird gleichmäßig ZWISCHEN den flex-Elementen verteilt */
+  /* justify-content: space-around; verfügbarer Platz wird gleichmäßig AUßERHALB den flex-Elementen verteilt */
+  /* justify-content: flex-start; flex-start bringt alle flex-Elemente an den Startpunkt (achtet auf die Hauptachse) */
+  /* justify-content: flex-end; flex-end bringt alle flex-Elemente an den Endpunkt (achtet auf die Hauptachse) */
+}
+
+/* # align-items */
+
+.flex-item__list {
+  display: flex;
+  padding: 10px;
+  margin: 5px 0;
+  /* gap setzt einen freien space zwischen allen Elementen. In diesem Fall geflexte Elemente */
+  /* gap: 15px; */
+  border: 3px solid deeppink;
+
+  /* ! Bei den gaps aufpassen! immer auf die Richtungen der Achse achten, sonst wird ggf. eine property nicht angewendet! */
+  /* flex-direction: row; das ist der Standard-Wert beim aktivieren von flex
+  column-gap: 5rem; */
+
+  /* flex-direction: column;
+  row-gap: 5rem; */
+
+  /* ? es gehen auch 2 Werte! */
+  /* gap: 5rem 10rem; */
+}
+
+.graffiti {
+  display: flex;
+  align-items: center; /* zentriert die Elemente vertikal in der Mitte des Containers */
+  margin-bottom: 30px;
+  /* align-items: flex-start;
+  align-items: flex-end; */
+}
+
+/* # flex-direction */
+/* ! ACHTUNG! flex-direction dreht unsere Achsen */
+/* ! Unterschied flex-end und end */
+/* end bezieht sich IMMER auf die Schreibrichtung, währenddessen flex-end sich IMMER auf die flex-Achse bezieht */
+
+.kategorie {
+  display: flex;
+  justify-content: center;
+  /* flex-direction: row; ist der initial-Wert */
+  flex-direction: row-reverse;
+  /* flex-direction: column;
+  flex-direction: column-reverse; */
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-bottom: 30px;
+}
+
+.kategorie a {
+  color: blueviolet;
+  padding: 10px;
+}
+
+/* # flexbox wrap */
+
+.box {
+  row-gap: 20px;
+  column-gap: 30px;
+  margin-bottom: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Es wechselt automatisch die directions, wie es nötig ist, um den Platz einzunehmen, dass KEIN horizontal scroll entsteht */
+  flex-wrap: wrap;
+}
+
+.box article {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background-color: rgba(238, 130, 238, 0.656);
+  text-align: center;
+  border-radius: 20px;
+  padding: 30px;
+  min-height: 30vh;
+  width: 350px;
+}
+
+/* # order */
+/* ? order platziert jedes einzelne Element einer Flexbox in ein Feld der Wahl, ohne dabei die Reihenfolge des Inhalts im Markup zu ändern. */
+
+.box article:nth-of-type(1) {
+  background-color: yellow;
+  order: 3;
+}
+
+.box article:nth-of-type(2) {
+  background-color: blue;
+  order: 2;
+}
+
+.box article:nth-of-type(3) {
+  background-color: peachpuff;
+  order: 3;
+}
