@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- ~ Beispiel 1 -->
+    <form id="login" onsubmit="">
+      <label for="username">Username</label>
+      <input type="text" name="" id="username" />
+
+      <label for="password">Password</label>
+      <input type="password" name="" id="password" />
+
+      <button type="submit">Send</button>
+      <p></p>
+    </form>
+
+    <!-- ~ Beispiel 2 -->
+    <input type="text" name="" id="live-input" placeholder="Tippe irgendwas..." />
+    <label for="">
+      <input type="checkbox" name="" id="agree-checkbox" />
+      Ich stimme zu
+    </label>
+
+    <!-- ~ Beispiel 3 -->
+    <input type="color" name="" id="color-picker" />
+
+    <!-- ~ Beispiel 4 -->
+    <div>
+      <button type="button" id="say-hi-btn">So können wir auch Hallo sagen</button>
+      <p id="hello-output"></p>
+    </div>
+
+    <!-- ~ Beispiel 5 -->
+    <input type="text" name="text-input" id="text-input" />
+    <p id="text-output"></p>
+
+    <!-- ~ Beispiel 6 -->
+    <select name="select-input" id="select-input">
+      <option value=""></option>
+      <option value="pizza">Pizza</option>
+      <option value="burger">Burger</option>
+    </select>
+    <p id="select-output"></p>
+
+    <!-- ~ Beispiel 7 -->
+    <form>
+      <input type="password" name="" id="hacker" placeholder="schreib mal was" />
+      <p id="log"></p>
+    </form>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
